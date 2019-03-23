@@ -5,7 +5,7 @@ declare module "quick-test" {
     toBe
   }: {
     description?: string;
-    expect: (...args: any) => any;
+    expect: any;
     toBe: any;
   }): string;
   export = quickTest;

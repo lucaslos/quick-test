@@ -1,10 +1,9 @@
 function quickTest({ description = '', expect, toBe }) {
-  const value = expect();
   const descriptionText = `${description ? `Test: '${description}' `: ''}`;
 
-  const result = toBe === value
+  const result = toBe === expect
     ? `${descriptionText}✅ Passed`
-    : `${descriptionText}❌ Failed, returned => ${value}`;
+    : `${descriptionText}❌ Failed, returned => ${expect}`;
 
   if (description) console.log(result);
   return result;
